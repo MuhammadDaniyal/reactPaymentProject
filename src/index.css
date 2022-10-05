@@ -1,13 +1,819 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700&family=Carter+One&family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@500&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:wght@300;400;500&family=Pacifico&family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Shrikhand&family=Source+Sans+Pro:wght@300&family=Square+Peg&family=Ubuntu:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600&display=swap');
+/* custom colors  */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --bgcolor: #f1f5fd;
+  --primary-color: #6f5de7;
+  --text-color: #828286;
+  --main-text-color: #333333;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+}
+
+
+/* --------------------------------- navbar css style starts 
+---------------------------------------------------------------------------*/
+
+.navbar-bg {
+  background-color: var(--bgcolor);
+  padding: 1rem 0 !important;
+  /* position: sticky; */
+  position: relative;
+  z-index: 99;
+}
+
+.navbar-brand {
+  font-size: 3.7rem !important;
+  font-family: 'Pacifico', cursive;
+  /* color: #182334 !important; */
+}
+
+
+/* class - fixed top */
+.navbar {
+  /* position: sticky !important; */
+  background-color: var(--bgcolor);
+  /* padding: 1.5rem 0rem; */
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
+}
+
+.navbar li {
+  padding: 0 1.6rem;
+}
+
+.navbar li a {
+  font-size: 1.7rem !important;
+  font-weight: lighter;
+  position: relative;
+}
+
+.navbar li a:hover {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0.2rem 0.3rem rgba(183, 171, 255, 0.5) !important;
+  transition: all 0.2s;
+}
+
+.btn-style {
+  width: 10.5rem;
+  height: 3.9rem;
+  border-radius: 2rem !important;
+  color: #fff !important;
+  background-color: var(--primary-color) !important;
+  text-transform: capitalize;
+  font-size: 1.5rem !important;
+}
+
+.btn-style:first-child {
+  margin-right: 1.8rem;
+}
+
+.btn-style:hover {
+  border: 0.1rem solid var(--primary-color) !important;
+  background-color: transparent !important;
+  color: var(--primary-color) !important;
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5) !important;
+  transition: all 0.4s;
+}
+
+.btn-two-style {
+  border: 0.1rem solid var(--primary-color) !important;
+  background-color: transparent !important;
+  color: var(--primary-color) !important;
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5) !important;
+}
+
+.btn-two-style:hover {
+  color: #fff !important;
+  background-color: var(--primary-color) !important;
+  text-transform: capitalize;
+}
+
+
+/* --------------------------------- Navbar ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- Hero sEction  starts  
+                        -------------------------------------------------------*/
+
+
+header {
+  background-color: var(--bgcolor);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-hero-container {
+  height: 80vh;
+  display: flex;
+  /* background-color: blueviolet; */
+}
+
+.main-hero-container h1 {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.main-hero-para {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin: 2rem 0 4rem 0;
+  font-weight: lighter;
+  width: 76%;
+  /* text-align: justify ; */
+}
+
+.main-hero-container h3 {
+  font-weight: normal;
+}
+
+.input-group {
+  position: relative !important;
+  width: 117% !important;
+  /* box-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25) !important; */
+}
+
+.form-control-text {
+  position: absolute;
+  height: 4.6rem;
+  border: none;
+  outline-style: none;
+  padding-left: 1.5rem !important;
+  font-size: 1.4rem;
+  font-weight: lighter;
+
+  box-shadow: 0.2rem 0.2rem 0.3em rgb(0 0 0 / 25%) !important;
+}
+
+.input-group-button {
+  position: absolute;
+  right: 51%;
+  top: 0.5rem;
+  color: #fff !important;
+  background-color: var(--primary-color) !important;
+  height: 3.6rem;
+  width: 15%;
+  border-radius: 2rem !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.input-group-button:hover {
+  border: 0.1rem solid var(--primary-color) !important;
+  background-color: transparent !important;
+  color: var(--primary-color) !important;
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5) !important;
+  transition: all 0.4s;
+}
+
+/* right side */
+
+.main-herosection-images {
+  position: relative;
+}
+
+.main-herosection-images img {
+  width: 54%;
+  height: 70%;
+  margin-top: 7.5rem;
+  box-shadow: 0 0.8rem 0.8rem rgb(0 0 0 / 25%) !important;
+  border-radius: 1.5rem;
+  position: absolute;
+  /* width: 60%;
+  height: 75%;
+  margin-top: 5rem;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+  position: absolute; */
+}
+
+.main-herosection-images .main-hero-img2 {
+  position: absolute;
+  width: 45%;
+  height: 30%;
+  left: 52%;
+  top: -3%;
+  box-shadow: 0.8rem 0 0.8rem rgb(0 0 0 / 25%);
+  /* position: absolute;
+  width: 45%;
+  height: 30%;
+  left: 50%;
+  top: -3%;
+  box-shadow: 0.8rem 0 0.8rem rgba(0, 0, 0, 0.25); */
+}
+
+
+/* --------------------------------- Hero sEction  ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- Work Section below hero section   starts  
+                        -------------------------------------------------------*/
+
+.work-container {
+  width: 80vw;
+  padding: 5rem !important;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+  margin-top: -8rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.work-container .main-heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 2.6rem;
+  word-spacing: 0.7rem;
+}
+
+.work-container-subdiv {
+  padding: 0 2rem !important;
+}
+
+
+.work-container .sub-heading {
+  font-size: 2.2rem;
+  /* font-weight: normal; */
+}
+
+.main-work-para {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin: 2rem 0 2.2rem 0;
+  font-weight: lighter;
+  width: 76%;
+  /* text-align: justify ; */
+}
+
+.fontawesome-style {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--bgcolor);
+  /* display: grid;
+  place-items: center;
+  text-align: center;
+  margin: 2rem auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.1rem auto 3.1rem auto;
+  cursor: pointer;
+}
+
+.fontawesome-style:hover {
+  box-shadow: 0.3rem 0.3rem 1.4rem rgba(0, 0, 0, 0.1);
+}
+
+
+/* --------------------------------- Hero sEction  ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- Work Section below hero section   starts  
+                        -------------------------------------------------------*/
+
+.common-section {
+  margin: 5rem 0;
+}
+
+.our-services img {
+  /* width: 40%;
+  height: 70%;
+  margin-top: 10rem; */
+  width: 45%;
+  height: 68%;
+  margin-top: 12rem;
+  box-shadow: 0rem 0.8rem 0.8rem rgb(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+}
+
+.our-services .mini-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 3rem 0;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.our-services .main-heading {
+  font-weight: bolder;
+}
+
+.our-services-info {
+  margin-top: 3rem !important;
+}
+
+.our-services .our-services-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0.1rem solid var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+}
+
+.our-services-data {
+  padding-left: 2.3rem !important;
+}
+
+.our-services .our-services-data p {
+  margin: 1rem 0;
+}
+
+
+/* 2nd section of about us  */
+
+.our-services-rightside {
+  margin-top: 8rem;
+}
+
+.our-services-rightside-content {
+  padding-left: 8rem !important;
+}
+
+/* --------------------------------- Work Section below hero section   end  
+                        ------------------------------------------------------- */
+
+
+/* --------------------------------- Service Section below hero section   start  
+                        ------------------------------------------------------- */
+
+
+.service-main-container .work-container-subdiv .fontawesome-style {
+  margin: 2rem 0;
+  font-size: 2.2rem;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+
+.service-main-container {
+  margin-top: 5rem;
+  padding: 2rem 0 5rem 0;
+}
+
+.service-main-container .main-heading {
+  margin: 3rem 0 2.5rem 0;
+}
+
+.service-main-container .work-container-subdiv {
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.16);
+}
+
+.work-container-subdiv .main-work-para {
+  width: 100%;
+}
+
+.work-container-subdiv:hover {
+  background-color: var(--bgcolor);
+  cursor: pointer;
+}
+
+/* box py hover hoga to direct child py fontawesome py bh farq parega alag sy box py hover hona sy */
+/* box py hover hona sy direct child py target krrha */
+.work-container-subdiv:hover>.fontawesome-style {
+  background-color: #fff;
+}
+
+
+@media (min-width: 1400px) {
+  .service-container .col-xxl-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .service-container .col-lg-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: 2.5rem auto;
+  }
+}
+
+/* --------------------------------- Service Section below hero section   end  
+                        ------------------------------------------------------- */
+
+/* --------------------------------- ContactUs Section below hero section   start  
+                        ------------------------------------------------------- */
+
+.contactus-section {
+  margin: 5rem 0 10rem 0;
+}
+
+.contact-leftside img {
+  min-width: 80%;
+  max-height: 28em;
+  height: auto;
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.16);
+  border-radius: 1.5rem;
+}
+
+.contact-input-field {
+  margin-bottom: 3rem;
+}
+
+
+.contact-rightside form .form-control {
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+  font-weight: lighter;
+}
+
+.contact-rightside form .form-check-input {
+  width: 2rem;
+  height: 2rem;
+}
+
+.form-checkbox-style {
+  margin: 4rem 0;
+}
+
+.contact-rightside form .main-work-para {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin: 0 !important;
+  font-weight: lighter;
+  width: 75%;
+  padding: 0 2rem !important;
+}
+
+/* --------------------------------- ContactUs Section below hero section   end  
+                        ------------------------------------------------------- */
+
+
+/* --------------------------------- Footer Section below hero section   start  
+                        ------------------------------------------------------- */
+
+footer {
+  padding: 5rem 0;
+  background-color: #182334;
+  color: #fff !important;
+}
+
+footer h2 {
+  color: #fff;
+}
+
+footer li {
+  list-style: none;
+  font-size: 1.2rem !important;
+  font-weight: lighter;
+  color: #fff;
+  cursor: pointer;
+  margin: 0.4rem 0 !important;
+}
+
+footer li a:hover {
+  color: var(--primary-color) !important;
+}
+
+footer li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+footer .fontawesome-style {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  background-color: transparent;
+  width: 0rem;
+  height: 0rem;
+  margin: 2.5rem 0;
+  cursor: pointer;
+}
+
+footer .fontawesome-style:hover {
+  transition: all 1s;
+  /* color change kalya 1s */
+  animation: rotatefont 1s linear infinite alternate-reverse;
+  /* animation ma bara chota hona kalya 1s */
+  color: #fff;
+}
+
+@keyframes rotatefont {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+footer .main-hero-para {
+  margin: 0rem;
+}
+
+footer .col3-para {
+  font-size: 1.2rem;
+}
+
+/* --------------------------------- responsive media queries  
+                        -------------------------------------------------------*/
+
+
+@media (min-width: 1500px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1500px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1400px;
+  }
+}
+
+
+@media (max-width: 980px) {
+  .navbar .navbar-collapse {
+    margin-top: 1rem;
+    background-color: #fff;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .input-group .btn-style {
+    font-size: 1.2rem;
+  }
+
+  /* main hero  container */
+  .main-hero-container h1 {
+    font-size: 2.5rem !important;
+    margin-top: 1.6rem;
+  }
+
+  .main-hero-para {
+    font-size: 1.5rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    margin: 1.6rem 0 3.3rem 0;
+  }
+
+  .main-hero-container .header-left-side {
+    padding-left: 4rem !important;
+    margin-top: 4rem !important;
+  }
+
+  /* header img part start */
+  .main-herosection-images {
+    position: relative;
+    height: 25rem;
+  }
+
+  /* .main-herosection-images img{
+    margin-top: 4rem;
+  } */
+
+  .header-right-side img {
+    width: 55%;
+    height: 95%;
+    margin-top: 0.6rem;
+  }
+
+  .main-herosection-images .main-hero-img1 {
+    margin-top: 5rem;
+  }
+
+  .main-herosection-images .main-hero-img2 {
+    position: absolute;
+    width: 42%;
+    height: 40%;
+    left: 52%;
+    top: -1%;
+    /* margin-top: 1.5rem; */
+    box-shadow: 0.8rem 0 0.8rem rgb(0 0 0 / 25%);
+  }
+
+  /* header img part end */
+  .input-group {
+    margin-top: 0.4rem;
+  }
+
+  .input-group input {
+    width: 75% !important;
+  }
+
+  .input-group .input-group-button {
+    right: 26%;
+    width: 30%;
+  }
+
+  /* work container start */
+  .work-container {
+    margin-top: -3.8rem;
+    width: 80vw;
+    padding: 5rem 1rem !important;
+  }
+
+  .work-container .main-heading {
+    font-size: 2.7rem;
+    font-weight: bolder;
+    margin-bottom: 3rem !important;
+    word-spacing: 0rem;
+  }
+
+  .work-section {
+    padding: 0 3.2rem !important;
+  }
+
+  .work-container-subdiv {
+    padding: 0 0rem !important;
+
+  }
+
+  /* work container end */
+
+  /* AboutUs container Start */
+
+  .our-services-list {
+    margin-top: 2.6rem !important;
+    padding-left: 3.5rem !important;
+  }
+
+
+  /* our Services */
+
+  .our-services .main-heading {
+    font-weight: bolder;
+    font-size: 2.2rem;
+  }
+
+  .our-services img {
+    width: 70%;
+    height: 85%;
+  }
+
+  .our-services .our-service-leftside-img img {
+    margin-top: 4rem;
+  }
+
+  .our-services .our-services-data p {
+    margin: 1rem 0rem !important;
+    width: 101%;
+  }
+
+  .our-services-rightside {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .our-services-rightside-content {
+    padding-left: 4rem !important;
+  }
+
+  .our-service-rightside-img {
+    text-align: center;
+  }
+
+  .our-services .our-service-rightside-img img {
+    margin-top: 7.5rem;
+  }
+
+
+  /* AboutUs container end */
+
+  /* boxess start */
+  .service-main-container {
+    margin-top: 0rem;
+  }
+
+  .service-container .work-container-subdiv {
+    padding: 0 2rem !important;
+    margin: 2rem auto !important;
+  }
+
+  .service-container .main-heading {
+    font-weight: bolder;
+    margin: 3rem auto 2rem auto !important;
+    font-size: 2.7rem;
+  }
+
+
+  /* ContactUs container start */
+
+  .contactus-section {
+    margin: 3.5rem 0 9rem 0;
+  }
+
+  
+  .contactus-section .contact-leftside img{
+    /* margin: 1rem auto !important; */
+    /* padding-left: 1rem; */
+    margin: 0 2.5rem;
+  }
+
+  .contactus-section .contact-rightside {
+    margin-top: 4rem;
+  }
+
+  .contactus-section .main-heading{
+    font-size: 2.5rem;
+  }
+
+  .contact-rightside form .main-work-para{
+    font-size: 1.3 !important;
+    color: var(--text-color);
+    margin: 0 !important;
+    font-weight: lighter;
+    width: 98%;
+    padding: 0px 1.5rem !important;
+  }
+  /* ContactUS container end */
+
+  /* Footer container start */
+
+  footer h2 {
+    font-size: 2rem;
+  }
+
+  footer .col3 {
+    width: 80vw;
+    margin: 2.5rem !important;
+    /* padding: 5rem 0 !important; */
+  }
+
+  footer .col3 h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  footer .col2 h2 {
+    /* text-align: center; */
+    padding-left: 3.2rem;
+  }
+
+  /* Footer container end */
+
+}
+
+/* Slider footer */
+
+@media (min-width: 1025px){
+  .main-container{
+    /* min-height: 100vh; */
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+  }
+  .f-footer{
+    position: sticky;
+    bottom: 0;
+  }
+
+  .contactus-section .container{
+    /* margin-bottom: 10rem; */
+    padding-bottom: 2rem;
+  }
 }
